@@ -1,0 +1,845 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Explore how mechanical systems work, including engines, gears, forces, motion and mechanical engineering.">
+
+    <title>Understanding Mechanical Systems | SMART WRLD</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: #080808;
+            color: #eeeeee;
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #111;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #333;
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #999;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        nav a {
+            color: #ddd;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #999;
+        }
+
+        .hero {
+            min-height: 470px;
+            padding: 90px 8%;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(90deg, rgba(0,0,0,.95), rgba(0,0,0,.35)),
+                url("https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1800&q=85")
+                center/cover;
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero small {
+            color: #bbb;
+            letter-spacing: 4px;
+            font-weight: bold;
+        }
+
+        .hero h1 {
+            font-size: clamp(35px, 6vw, 65px);
+            line-height: 1.1;
+            margin: 18px 0;
+        }
+
+        .hero h1 span {
+            color: #aaa;
+        }
+
+        .hero p {
+            color: #ddd;
+            max-width: 600px;
+            font-size: 17px;
+        }
+
+        .hero-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #eee;
+            color: #111;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        .container {
+            width: 84%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .intro {
+            padding: 55px 0 25px;
+        }
+
+        .intro h2,
+        .section h2 {
+            font-size: 29px;
+            color: #fff;
+        }
+
+        .intro p,
+        .section p {
+            color: #c5c5c5;
+        }
+
+        .highlight {
+            border-left: 4px solid #aaa;
+            padding: 15px 20px;
+            background: #151515;
+            margin: 25px 0;
+            color: #ddd;
+        }
+
+        .toc {
+            background: #141414;
+            border: 1px solid #333;
+            padding: 25px;
+            margin: 35px 0;
+            border-radius: 8px;
+        }
+
+        .toc h2 {
+            margin-top: 0;
+        }
+
+        .toc a {
+            display: block;
+            color: #ccc;
+            text-decoration: none;
+            padding: 5px 0;
+        }
+
+        .toc a:hover {
+            color: white;
+        }
+
+        .section {
+            padding: 35px 0;
+            border-bottom: 1px solid #292929;
+        }
+
+        .section h2 {
+            margin-bottom: 15px;
+        }
+
+        .section img {
+            width: 100%;
+            max-height: 420px;
+            object-fit: cover;
+            border-radius: 9px;
+            margin: 20px 0;
+            border: 1px solid #333;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: #151515;
+            border: 1px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #888;
+        }
+
+        .card img {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+            margin: 0;
+            border: none;
+            border-radius: 0;
+        }
+
+        .card-content {
+            padding: 18px;
+        }
+
+        .card h3 {
+            color: #fff;
+            margin-top: 0;
+        }
+
+        .card p {
+            color: #bbb;
+            font-size: 14px;
+        }
+
+        .example {
+            background: #171717;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .example h3 {
+            color: #ddd;
+            margin-top: 0;
+        }
+
+        .takeaway {
+            background: linear-gradient(135deg, #202020, #101010);
+            border: 1px solid #555;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 45px 0;
+        }
+
+        .quiz {
+            background: #141414;
+            padding: 30px;
+            border: 1px solid #444;
+            border-radius: 10px;
+            margin: 45px 0;
+        }
+
+        .quiz h2 {
+            margin-top: 0;
+        }
+
+        .quiz label {
+            display: block;
+            padding: 12px;
+            background: #202020;
+            margin: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .quiz input {
+            margin-right: 10px;
+        }
+
+        .quiz button {
+            background: #eee;
+            color: #111;
+            padding: 12px 22px;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        #quiz-result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #ddd;
+            margin: 20px 0 45px;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            color: white;
+        }
+
+        footer {
+            background: #111;
+            border-top: 1px solid #333;
+            padding: 35px 8%;
+            text-align: center;
+            color: #999;
+        }
+
+        .footer-links {
+            margin: 15px 0;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            margin: 8px;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .hero {
+                padding: 65px 7%;
+                min-height: 400px;
+            }
+
+            .container {
+                width: 90%;
+            }
+
+            .intro h2,
+            .section h2 {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">SMART <span>WRLD</span></div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="technology.html">Technology</a>
+        <a href="engineering.html">Engineering</a>
+        <a href="learn.html">Learn</a>
+        <a href="articles.html">Articles</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <small>ENGINEERING • MECHANICS • INNOVATION</small>
+
+        <h1>UNDERSTANDING <span>MECHANICAL SYSTEMS</span></h1>
+
+        <p>
+            Discover how machines work, how forces create movement,
+            and how mechanical engineering helps build the modern world.
+        </p>
+
+        <a href="#introduction" class="hero-button">START LEARNING</a>
+    </div>
+</section>
+
+<main class="container">
+
+    <section class="intro" id="introduction">
+        <h2>Introduction to Mechanical Systems</h2>
+
+        <p>
+            Mechanical systems are combinations of components that work
+            together to transfer force, control movement, or perform useful
+            tasks. They are found in vehicles, factories, household machines,
+            aircraft and many other technologies.
+        </p>
+
+        <p>
+            From a simple bicycle to a powerful industrial machine,
+            mechanical systems make everyday activities easier and more efficient.
+        </p>
+
+        <div class="highlight">
+            <strong>Did you know?</strong>
+            A bicycle is a mechanical system. Its pedals, chain, gears and
+            wheels work together to turn human effort into movement.
+        </div>
+    </section>
+
+    <section class="toc">
+        <h2>What You'll Learn</h2>
+
+        <a href="#components">01. Main Components of Mechanical Systems</a>
+        <a href="#forces">02. Forces and Motion</a>
+        <a href="#gears">03. Understanding Gears</a>
+        <a href="#engines">04. How Engines Work</a>
+        <a href="#applications">05. Mechanical Systems in Everyday Life</a>
+        <a href="#engineers">06. The Role of Mechanical Engineers</a>
+        <a href="#future">07. The Future of Mechanical Engineering</a>
+        <a href="#quiz">08. Test Your Knowledge</a>
+    </section>
+
+    <section class="section" id="components">
+        <h2>01. Main Components of Mechanical Systems</h2>
+
+        <p>
+            Mechanical systems contain different parts, each performing
+            a particular function. These components work together to
+            produce controlled movement or useful mechanical work.
+        </p>
+
+        <img
+            src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1200&q=85"
+            alt="Mechanical engineering equipment">
+
+        <div class="cards">
+
+            <div class="card">
+                <img
+                    src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=700&q=85"
+                    alt="Industrial machinery">
+                <div class="card-content">
+                    <h3>Gears</h3>
+                    <p>
+                        Gears transfer rotational movement and can change
+                        speed, torque and direction.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img
+                    src="https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=700&q=85"
+                    alt="Mechanical equipment">
+                <div class="card-content">
+                    <h3>Bearings</h3>
+                    <p>
+                        Bearings support rotating parts and help reduce
+                        friction between moving surfaces.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img
+                    src="https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&w=700&q=85"
+                    alt="Mechanical workshop">
+                <div class="card-content">
+                    <h3>Shafts</h3>
+                    <p>
+                        Shafts transmit rotational power from one
+                        mechanical component to another.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section" id="forces">
+        <h2>02. Forces and Motion</h2>
+
+        <p>
+            Force is a push or pull that can change the movement or shape
+            of an object. Mechanical engineering uses the principles of
+            force and motion to design machines that work properly.
+        </p>
+
+        <img
+            src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=85"
+            alt="Engineering equipment and mechanical systems">
+
+        <h3>Important concepts</h3>
+
+        <ul>
+            <li><strong>Force:</strong> A push or pull acting on an object.</li>
+            <li><strong>Motion:</strong> A change in an object's position.</li>
+            <li><strong>Friction:</strong> A force that opposes relative motion between surfaces.</li>
+            <li><strong>Torque:</strong> The turning effect of a force.</li>
+            <li><strong>Energy:</strong> The ability to do work or cause change.</li>
+        </ul>
+
+        <div class="example">
+            <h3>Everyday Example: A Door</h3>
+            <p>
+                When you push a door, you apply a force. The door rotates
+                around its hinges. This is an example of rotational motion.
+            </p>
+        </div>
+    </section>
+
+    <section class="section" id="gears">
+        <h2>03. Understanding Gears</h2>
+
+        <p>
+            Gears are rotating machine components with teeth that fit
+            together. They transfer movement and power between shafts.
+        </p>
+
+        <img
+            src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=85"
+            alt="Mechanical engineering and machinery">
+
+        <h3>Why are gears important?</h3>
+
+        <ul>
+            <li>They can increase or decrease rotational speed.</li>
+            <li>They can change the direction of rotation.</li>
+            <li>They can increase or decrease torque.</li>
+            <li>They help machines transfer power efficiently.</li>
+        </ul>
+
+        <div class="example">
+            <h3>Example: Bicycle Gears</h3>
+            <p>
+                Bicycle gears help riders choose different levels of
+                pedalling resistance. A suitable gear makes climbing
+                hills or travelling on flat roads easier.
+            </p>
+        </div>
+    </section>
+
+    <section class="section" id="engines">
+        <h2>04. How Engines Work</h2>
+
+        <p>
+            An engine is a machine that converts energy into mechanical
+            power. Different engines use different energy sources and
+            operating principles.
+        </p>
+
+        <img
+            src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1200&q=85"
+            alt="Car engine and mechanical components">
+
+        <h3>Common engine types</h3>
+
+        <div class="cards">
+
+            <div class="card">
+                <img
+                    src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=700&q=85"
+                    alt="Automobile">
+                <div class="card-content">
+                    <h3>Petrol Engines</h3>
+                    <p>
+                        These engines burn petrol in cylinders to produce
+                        power through controlled combustion.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img
+                    src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=700&q=85"
+                    alt="Modern vehicle">
+                <div class="card-content">
+                    <h3>Diesel Engines</h3>
+                    <p>
+                        Diesel engines use compression to heat air and
+                        ignite injected diesel fuel.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img
+                    src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=700&q=85"
+                    alt="Electric vehicle charging">
+                <div class="card-content">
+                    <h3>Electric Motors</h3>
+                    <p>
+                        Electric motors convert electrical energy into
+                        mechanical movement.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section" id="applications">
+        <h2>05. Mechanical Systems in Everyday Life</h2>
+
+        <p>
+            Mechanical systems are part of almost everything around us.
+            They help people travel, manufacture products, generate power
+            and complete everyday tasks.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <img
+                    src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=700&q=85"
+                    alt="Car">
+                <div class="card-content">
+                    <h3>Transportation</h3>
+                    <p>
+                        Cars, motorcycles, trains and aircraft use
+                        mechanical systems to move people and goods.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img
+                    src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=700&q=85"
+                    alt="Industrial machinery">
+                <div class="card-content">
+                    <h3>Manufacturing</h3>
+                    <p>
+                        Industrial machines help produce tools,
+                        electronics, vehicles and other products.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img
+                    src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=700&q=85"
+                    alt="Electricity infrastructure">
+                <div class="card-content">
+                    <h3>Energy</h3>
+                    <p>
+                        Turbines and other mechanical equipment help
+                        convert energy into useful forms.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section" id="engineers">
+        <h2>06. The Role of Mechanical Engineers</h2>
+
+        <p>
+            Mechanical engineers design, develop, test and improve machines
+            and mechanical systems. Their work combines mathematics,
+            science, creativity and practical problem-solving.
+        </p>
+
+        <img
+            src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=1200&q=85"
+            alt="Engineers working on a technical project">
+
+        <h3>What do mechanical engineers do?</h3>
+
+        <ul>
+            <li>Design machines and mechanical components.</li>
+            <li>Develop and test engines and power systems.</li>
+            <li>Improve manufacturing equipment.</li>
+            <li>Study materials, heat, energy and motion.</li>
+            <li>Help make machines safer and more efficient.</li>
+        </ul>
+
+        <div class="highlight">
+            Mechanical engineering is not just about fixing machines.
+            It is also about designing the machines and technologies
+            that will shape the future.
+        </div>
+    </section>
+
+    <section class="section" id="future">
+        <h2>07. The Future of Mechanical Engineering</h2>
+
+        <p>
+            Mechanical engineering continues to develop as new technologies
+            emerge. Engineers are combining traditional mechanical design
+            with electronics, computing and automation.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <img
+                    src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=700&q=85"
+                    alt="Robot technology">
+                <div class="card-content">
+                    <h3>Robotics</h3>
+                    <p>
+                        Robots combine mechanical parts, electronics
+                        and computer systems to perform tasks.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img
+                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=700&q=85"
+                    alt="Electronic circuit board">
+                <div class="card-content">
+                    <h3>Smart Machines</h3>
+                    <p>
+                        Sensors and computer systems help machines
+                        monitor conditions and respond automatically.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img
+                    src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=700&q=85"
+                    alt="Renewable energy infrastructure">
+                <div class="card-content">
+                    <h3>Renewable Energy</h3>
+                    <p>
+                        Mechanical engineers help develop equipment
+                        for wind, solar and other energy technologies.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="takeaway">
+        <h2>Key Takeaway</h2>
+
+        <p>
+            Mechanical systems are essential to modern life. They combine
+            components such as gears, shafts, bearings and engines to
+            transfer energy and create useful movement.
+        </p>
+
+        <p>
+            Understanding how these systems work is a first step toward
+            understanding mechanical engineering and the machines
+            that shape our world.
+        </p>
+
+        <strong>SMART WRLD — LEARN • BUILD • GROW.</strong>
+    </section>
+
+    <section class="quiz" id="quiz">
+        <h2>Test Your Knowledge</h2>
+
+        <p>
+            Which mechanical component is commonly used to transfer
+            rotational movement between shafts?
+        </p>
+
+        <form id="mechanical-quiz">
+
+            <label>
+                <input type="radio" name="answer" value="a">
+                A. Bearing
+            </label>
+
+            <label>
+                <input type="radio" name="answer" value="b">
+                B. Gear
+            </label>
+
+            <label>
+                <input type="radio" name="answer" value="c">
+                C. Spring
+            </label>
+
+            <label>
+                <input type="radio" name="answer" value="d">
+                D. Bolt
+            </label>
+
+            <button type="submit">CHECK ANSWER</button>
+
+        </form>
+
+        <p id="quiz-result" aria-live="polite"></p>
+    </section>
+
+    <a href="articles.html" class="back-link">
+        ← Back to All Articles
+    </a>
+
+</main>
+
+<footer>
+
+    <div class="logo">SMART <span>WRLD</span></div>
+
+    <p>LEARN • BUILD • GROW</p>
+
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="technology.html">Technology</a>
+        <a href="engineering.html">Engineering</a>
+        <a href="learn.html">Learn</a>
+        <a href="articles.html">Articles</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <p>© 2026 SMART WRLD. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+    const quizForm = document.getElementById("mechanical-quiz");
+    const quizResult = document.getElementById("quiz-result");
+
+    quizForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const selected = document.querySelector(
+            'input[name="answer"]:checked'
+        );
+
+        if (!selected) {
+            quizResult.textContent = "Please select an answer first.";
+            quizResult.style.color = "#ffcc66";
+            return;
+        }
+
+        if (selected.value === "b") {
+            quizResult.textContent =
+                "Correct! Gears transfer rotational movement between shafts.";
+            quizResult.style.color = "#8ee6a1";
+        } else {
+            quizResult.textContent =
+                "Not quite. The correct answer is B: Gear. Try again!";
+            quizResult.style.color = "#ff9999";
+        }
+    });
+</script>
+
+</body>
+</html>

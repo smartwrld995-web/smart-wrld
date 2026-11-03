@@ -1,0 +1,687 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Artificial Intelligence | SMART WRLD</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .article-heading {
+            text-align: center;
+            padding: 55px 20px;
+            background: linear-gradient(135deg, #080808, #292929, #080808);
+            border-bottom: 1px solid silver;
+        }
+
+        .article-heading h1 {
+            font-size: clamp(27px, 5vw, 45px);
+            max-width: 950px;
+            margin: 20px auto;
+        }
+
+        .article-heading h1 span,
+        .article-quiz h2 span,
+        .article-references h2 span {
+            color: silver;
+        }
+
+        .article-intro {
+            max-width: 800px;
+            margin: 15px auto;
+            line-height: 1.8;
+        }
+
+        .article-hero-image {
+            display: block;
+            width: min(100% - 30px, 1100px);
+            max-height: 480px;
+            object-fit: cover;
+            margin: 35px auto;
+            border-radius: 10px;
+        }
+
+        .article-inline-image {
+            display: block;
+            width: 100%;
+            max-height: 380px;
+            object-fit: cover;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+
+        .article-body {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            line-height: 1.85;
+        }
+
+        .article-body h2 {
+            margin-top: 45px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #555;
+        }
+
+        .article-body h3 {
+            margin-top: 25px;
+            color: silver;
+        }
+
+        .article-body li {
+            margin-bottom: 10px;
+        }
+
+        .article-highlight,
+        .article-takeaway {
+            padding: 22px;
+            margin: 30px 0;
+            background: #171717;
+            border-left: 4px solid silver;
+            border-radius: 5px;
+        }
+
+        .article-quiz {
+            margin-top: 50px;
+            padding: 25px;
+            background: #151515;
+            border: 1px solid #555;
+            border-radius: 8px;
+        }
+
+        .article-quiz button {
+            cursor: pointer;
+            margin: 6px;
+        }
+
+        .answer-reference {
+            margin-top: 20px;
+            color: silver;
+        }
+
+        .article-references {
+            margin-top: 45px;
+            padding-top: 20px;
+            border-top: 1px solid #555;
+        }
+
+        .article-references a {
+            color: silver;
+        }
+
+        .back-to-library {
+            text-align: center;
+            margin: 35px 15px 55px;
+        }
+
+        .site-footer {
+            padding: 35px 20px;
+            background: #080808;
+            border-top: 1px solid #555;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 22px;
+            margin: 20px 0;
+        }
+
+        .footer-links a {
+            color: silver;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .article-heading {
+                padding: 40px 15px;
+            }
+
+            .article-body {
+                padding: 15px;
+            }
+
+            .article-quiz {
+                padding: 15px;
+            }
+
+            .footer-links {
+                gap: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">SMART <span>WRLD</span></div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="technology.html">Technology</a>
+        <a href="engineering.html">Engineering</a>
+        <a href="learn.html">Learn</a>
+        <a href="articles.html">Articles</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main class="article-page">
+
+    <div class="article-heading">
+
+        <p class="welcome">SMART WRLD EDUCATIONAL JOURNAL</p>
+
+        <span class="article-category">TECHNOLOGY</span>
+
+        <h1>UNDERSTANDING <span>ARTIFICIAL INTELLIGENCE</span></h1>
+
+        <p class="article-intro">
+            From intelligent assistants to autonomous machines,
+            Artificial Intelligence is changing how people interact
+            with technology. Discover the science behind AI,
+            how it works, where it is used and what its future
+            could mean for society.
+        </p>
+
+        <p class="article-meta">BEGINNER LEVEL • TECHNOLOGY • 8–10 MIN READ</p>
+
+    </div>
+
+    <img
+        class="article-hero-image"
+        src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1400"
+        alt="Artificial intelligence technology concept"
+    >
+
+    <article class="article-body">
+
+        <h2>1. INTRODUCTION TO ARTIFICIAL INTELLIGENCE</h2>
+
+        <p>
+            Artificial Intelligence, commonly abbreviated as AI,
+            is a field of computer science concerned with developing
+            systems capable of performing tasks that normally
+            require human intelligence. These tasks include
+            recognizing patterns, understanding language,
+            interpreting images, making predictions and
+            supporting decision-making.
+        </p>
+
+        <p>
+            Traditional computer programs generally follow
+            instructions written by developers. Many modern AI
+            systems, however, use algorithms that can identify
+            patterns in data and use those patterns to produce
+            predictions or responses.
+        </p>
+
+        <p>
+            AI does not mean that a computer has automatically
+            become conscious or possesses human understanding.
+            It means that the system can perform particular
+            intelligent-looking tasks through computational methods.
+        </p>
+
+        <div class="article-highlight">
+            <strong>KEY DEFINITION</strong>
+            <p>
+                Artificial Intelligence is the development of
+                computer systems that perform tasks associated
+                with human intelligence, such as learning,
+                reasoning, language processing and perception.
+            </p>
+        </div>
+
+        <h2>2. HOW DOES ARTIFICIAL INTELLIGENCE WORK?</h2>
+
+        <p>
+            Many AI applications depend on data, algorithms
+            and computational models. Data provides examples
+            for a system to learn from, while algorithms
+            determine how the information is processed.
+        </p>
+
+        <img
+            class="article-inline-image"
+            src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1200"
+            alt="Computer programming and data processing"
+        >
+
+        <h3>2.1 DATA COLLECTION</h3>
+
+        <p>
+            Data is information used to develop or operate an
+            AI system. Depending on the application, it may
+            include text, numerical measurements, photographs,
+            audio recordings or other digital information.
+        </p>
+
+        <p>
+            For example, an image-recognition system may be
+            trained using a large collection of labelled images.
+            The labels help the system associate visual patterns
+            with categories.
+        </p>
+
+        <h3>2.2 TRAINING THE MODEL</h3>
+
+        <p>
+            During machine-learning training, a model processes
+            examples and adjusts its internal parameters to
+            improve its performance on a particular task.
+            The training process depends on the learning method
+            and the type of data being used.
+        </p>
+
+        <h3>2.3 TESTING AND EVALUATION</h3>
+
+        <p>
+            After training, developers evaluate the model using
+            data that was not used during training. This helps
+            measure how well it performs on unfamiliar examples.
+        </p>
+
+        <h3>2.4 PRODUCING RESULTS</h3>
+
+        <p>
+            Once deployed, an AI system receives new information
+            and generates an output. The output might be a
+            classification, recommendation, prediction,
+            generated response or control signal.
+        </p>
+
+        <h2>3. MAJOR TYPES OF ARTIFICIAL INTELLIGENCE</h2>
+
+        <p>
+            AI can be classified in different ways. One useful
+            approach is to examine the range of tasks a system
+            is designed to perform.
+        </p>
+
+        <h3>3.1 NARROW ARTIFICIAL INTELLIGENCE</h3>
+
+        <p>
+            Narrow AI is designed to perform specific tasks
+            or a limited group of related tasks. Most AI systems
+            currently used in everyday applications fall into
+            this category.
+        </p>
+
+        <p>
+            Examples include voice recognition, translation
+            software, recommendation systems and image
+            classification tools.
+        </p>
+
+        <h3>3.2 ARTIFICIAL GENERAL INTELLIGENCE</h3>
+
+        <p>
+            Artificial General Intelligence, often called AGI,
+            describes a proposed form of AI that could perform
+            a broad range of intellectual tasks with flexibility
+            comparable to human intelligence.
+        </p>
+
+        <p>
+            AGI remains a research and theoretical concept.
+            Today's widely deployed AI systems should not
+            be assumed to possess this level of general ability.
+        </p>
+
+        <h2>4. IMPORTANT TECHNOLOGIES WITHIN AI</h2>
+
+        <h3>4.1 MACHINE LEARNING</h3>
+
+        <p>
+            Machine Learning is a branch of AI that enables
+            computer systems to identify patterns from data
+            and improve their performance on particular tasks.
+        </p>
+
+        <p>
+            A practical example is an email filtering system
+            that learns to distinguish unwanted messages
+            from ordinary correspondence using patterns
+            in previously classified emails.
+        </p>
+
+        <h3>4.2 DEEP LEARNING</h3>
+
+        <p>
+            Deep Learning is a specialized area of machine
+            learning that uses artificial neural networks
+            containing multiple processing layers.
+        </p>
+
+        <p>
+            These networks can learn complex patterns from
+            large datasets and are widely used in image
+            recognition, speech processing and language systems.
+        </p>
+
+        <h3>4.3 NATURAL LANGUAGE PROCESSING</h3>
+
+        <p>
+            Natural Language Processing, or NLP, focuses
+            on enabling computers to process and work with
+            human language.
+        </p>
+
+        <p>
+            It supports applications such as translation,
+            text analysis, speech recognition and conversational
+            assistants.
+        </p>
+
+        <h3>4.4 COMPUTER VISION</h3>
+
+        <p>
+            Computer Vision enables computer systems to
+            analyse and interpret visual information from
+            photographs, videos and other image sources.
+        </p>
+
+        <p>
+            It can be used in manufacturing inspection,
+            medical image analysis, traffic monitoring
+            and agricultural research.
+        </p>
+
+        <h2>5. REAL-WORLD APPLICATIONS OF AI</h2>
+
+        <img
+            class="article-inline-image"
+            src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200"
+            alt="Robotics and intelligent machines"
+        >
+
+        <h3>HEALTHCARE</h3>
+
+        <p>
+            AI tools can assist researchers and healthcare
+            professionals with analysing medical images,
+            organizing information and identifying patterns
+            that may require further investigation.
+        </p>
+
+        <h3>TRANSPORTATION</h3>
+
+        <p>
+            AI is used in traffic prediction, route planning,
+            driver-assistance systems and research into
+            automated transportation.
+        </p>
+
+        <h3>EDUCATION</h3>
+
+        <p>
+            Educational AI applications can support
+            personalized learning, language practice,
+            feedback and the organization of educational
+            resources.
+        </p>
+
+        <h3>MANUFACTURING</h3>
+
+        <p>
+            Industrial systems use AI for equipment monitoring,
+            quality inspection, production planning and
+            predictive maintenance.
+        </p>
+
+        <h3>AGRICULTURE</h3>
+
+        <p>
+            AI applications can help analyse crop images,
+            monitor environmental conditions and support
+            agricultural planning.
+        </p>
+
+        <h2>6. ADVANTAGES AND LIMITATIONS OF AI</h2>
+
+        <h3>ADVANTAGES</h3>
+
+        <ul>
+            <li>Can process large amounts of information quickly.</li>
+            <li>Can automate certain repetitive tasks.</li>
+            <li>Can identify patterns in complex datasets.</li>
+            <li>Can support research and technical development.</li>
+            <li>Can improve efficiency in suitable applications.</li>
+        </ul>
+
+        <h3>LIMITATIONS AND CHALLENGES</h3>
+
+        <ul>
+            <li>AI systems can produce inaccurate information.</li>
+            <li>Biased training data can affect system results.</li>
+            <li>Some systems require substantial computing resources.</li>
+            <li>Privacy and data protection must be considered.</li>
+            <li>Human evaluation remains important in critical decisions.</li>
+        </ul>
+
+        <div class="article-highlight">
+            <strong>IMPORTANT REMINDER</strong>
+            <p>
+                AI-generated information should not automatically
+                be treated as correct. Important results should
+                be checked against reliable evidence and
+                appropriate expert guidance.
+            </p>
+        </div>
+
+        <h2>7. THE FUTURE OF ARTIFICIAL INTELLIGENCE</h2>
+
+        <p>
+            Research into AI continues to develop across
+            computing, engineering, science and other fields.
+            Improvements in machine learning, hardware and
+            data processing are creating new possibilities
+            for intelligent applications.
+        </p>
+
+        <p>
+            Future developments may influence scientific
+            research, industrial automation, education,
+            environmental monitoring and many other areas.
+        </p>
+
+        <p>
+            However, responsible development will remain
+            important. Reliability, transparency, privacy,
+            security and human oversight are essential
+            considerations when designing and deploying
+            AI technologies.
+        </p>
+
+        <h2>8. HOW TO BEGIN LEARNING AI</h2>
+
+        <p>
+            You do not need to become an expert in mathematics
+            or computer science before exploring AI. A
+            structured learning path can help you develop
+            the necessary foundations.
+        </p>
+
+        <ol>
+            <li>Develop basic computer literacy.</li>
+            <li>Learn fundamental mathematics and logical reasoning.</li>
+            <li>Understand basic programming concepts.</li>
+            <li>Explore how data is collected and analysed.</li>
+            <li>Study introductory machine-learning concepts.</li>
+            <li>Experiment with simple educational AI projects.</li>
+        </ol>
+
+        <h2>9. CONCLUSION</h2>
+
+        <p>
+            Artificial Intelligence is an important area of
+            modern computing that combines algorithms, data
+            and computational models to perform specialized
+            tasks.
+        </p>
+
+        <p>
+            Understanding its foundations helps us recognize
+            both its capabilities and limitations. Whether
+            your interest is engineering, science, software
+            development or digital innovation, AI provides
+            an important field of knowledge to explore.
+        </p>
+
+        <div class="article-takeaway">
+            <h3>THE SMART WRLD TAKEAWAY</h3>
+            <p>
+                Artificial Intelligence is not simply about
+                making computers smarter. It is about applying
+                computational methods to solve meaningful
+                problems while understanding the responsibilities
+                that come with the technology.
+            </p>
+            <p><strong>LEARN • BUILD • GROW</strong></p>
+        </div>
+
+        <section class="article-quiz">
+
+            <h2>TEST YOUR <span>KNOWLEDGE</span></h2>
+
+            <p>
+                Which field of AI focuses on enabling computers
+                to interpret photographs and visual information?
+            </p>
+
+            <div class="quiz-options">
+
+                <button onclick="answerQuiz(this, false)">
+                    Natural Language Processing
+                </button>
+
+                <button onclick="answerQuiz(this, true)">
+                    Computer Vision
+                </button>
+
+                <button onclick="answerQuiz(this, false)">
+                    Data Storage
+                </button>
+
+            </div>
+
+            <p id="article-quiz-result"></p>
+
+            <button id="article-reset" onclick="resetArticleQuiz()">
+                TRY AGAIN
+            </button>
+
+            <div class="answer-reference">
+                <strong>ANSWER:</strong>
+                Computer Vision.
+            </div>
+
+        </section>
+
+        <section class="article-references">
+
+            <h2>FURTHER <span>READING</span></h2>
+
+            <p>Explore these educational resources to learn more:</p>
+
+            <ul>
+                <li>
+                    <a href="https://www.nist.gov/artificial-intelligence"
+                       target="_blank" rel="noopener noreferrer">
+                        National Institute of Standards and Technology — AI
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.ibm.com/think/topics/artificial-intelligence"
+                       target="_blank" rel="noopener noreferrer">
+                        IBM — Artificial Intelligence Explained
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://developers.google.com/machine-learning/crash-course"
+                       target="_blank" rel="noopener noreferrer">
+                        Google — Machine Learning Crash Course
+                    </a>
+                </li>
+            </ul>
+
+        </section>
+
+    </article>
+
+    <div class="back-to-library">
+        <a href="articles.html" class="hero-button">
+            BACK TO ARTICLE LIBRARY
+        </a>
+    </div>
+
+</main>
+
+<footer class="site-footer">
+
+    <div class="logo">SMART <span>WRLD</span></div>
+
+    <p>LEARN • BUILD • GROW</p>
+
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="technology.html">Technology</a>
+        <a href="engineering.html">Engineering</a>
+        <a href="learn.html">Learn</a>
+        <a href="articles.html">Articles</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <p>SMART WRLD © 2026 | All Rights Reserved</p>
+
+</footer>
+
+<script>
+
+    function answerQuiz(button, correct) {
+
+        const result = document.getElementById("article-quiz-result");
+        const buttons = document.querySelectorAll(".article-quiz .quiz-options button");
+
+        buttons.forEach(function(item) {
+            item.disabled = true;
+        });
+
+        if (correct) {
+            result.textContent = "Correct! Computer Vision analyses visual information.";
+            result.style.color = "silver";
+        } else {
+            result.textContent = "Not quite. The correct answer is Computer Vision.";
+            result.style.color = "orange";
+        }
+
+    }
+
+    function resetArticleQuiz() {
+
+        document.getElementById("article-quiz-result").textContent = "";
+
+        document.querySelectorAll(".article-quiz .quiz-options button")
+            .forEach(function(item) {
+                item.disabled = false;
+            });
+
+    }
+
+</script>
+
+</body>
+</html>

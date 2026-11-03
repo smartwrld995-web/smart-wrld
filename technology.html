@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore artificial intelligence, robotics and computing with SMART WRLD.">
+    <title>Technology | SMART WRLD</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .technology-hero {
+            min-height: 350px;
+            padding: 75px 8%;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(90deg, rgba(0,0,0,.9), rgba(0,0,0,.4)),
+                url("https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .technology-hero-content {
+            max-width: 700px;
+        }
+
+        .technology-hero h1 {
+            font-size: clamp(35px, 6vw, 60px);
+            margin: 15px 0;
+        }
+
+        .technology-hero h1 span {
+            color: silver;
+        }
+
+        .technology-hero p {
+            max-width: 600px;
+        }
+
+        .technology-tag {
+            color: silver;
+            letter-spacing: 4px;
+            font-size: 13px;
+        }
+
+        .topic-card img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .lesson-card {
+            padding: 30px;
+        }
+
+        .lesson-card h3 {
+            margin-top: 20px;
+            color: silver;
+        }
+
+        .lesson-card h3:first-child {
+            margin-top: 0;
+        }
+
+        .topic-card .hero-button {
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header nav a {
+            transition: color .3s ease;
+        }
+
+        header nav a:hover {
+            color: silver;
+        }
+
+        @media(max-width: 650px) {
+            .technology-hero {
+                padding: 55px 7%;
+            }
+
+            .topic-card img {
+                height: 180px;
+            }
+
+            .lesson-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">SMART <span>WRLD</span></div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="technology.html">Technology</a>
+        <a href="engineering.html">Engineering</a>
+        <a href="learn.html">Learn</a>
+        <a href="articles.html">Articles</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="technology-hero">
+    <div class="technology-hero-content">
+        <span class="technology-tag">DISCOVER • EXPLORE • INNOVATE</span>
+
+        <h1>THE WORLD OF <span>TECHNOLOGY</span></h1>
+
+        <p>
+            Explore the innovations changing our world.
+            Understand modern technology, discover new ideas
+            and learn how digital systems work.
+        </p>
+    </div>
+</section>
+
+<section class="about">
+    <p class="welcome">DISCOVER WHAT'S POSSIBLE</p>
+    <h2>EXPLORE THE <span>FUTURE</span></h2>
+
+    <p>
+        Technology connects ideas with possibilities.
+        From artificial intelligence to robotics and computing,
+        discover how innovation is shaping everyday life.
+    </p>
+</section>
+
+<section class="explore">
+
+    <h2>EXPLORE <span>TECHNOLOGY</span></h2>
+
+    <div class="cards">
+
+        <div class="card topic-card">
+            <img
+                src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1000"
+                alt="Artificial intelligence technology"
+                loading="lazy"
+            >
+
+            <h3>ARTIFICIAL INTELLIGENCE</h3>
+
+            <p>
+                Discover how computers learn from information,
+                recognize patterns and help solve problems.
+            </p>
+
+            <a href="#ai-lesson" class="hero-button">LEARN MORE</a>
+        </div>
+
+        <div class="card topic-card">
+            <img
+                src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1000"
+                alt="Modern robotics"
+                loading="lazy"
+            >
+
+            <h3>ROBOTICS</h3>
+
+            <p>
+                Explore robots, automation and machines
+                designed to perform useful tasks.
+            </p>
+
+            <a href="#robotics-lesson" class="hero-button">LEARN MORE</a>
+        </div>
+
+        <div class="card topic-card">
+            <img
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1000"
+                alt="Computer circuit board"
+                loading="lazy"
+            >
+
+            <h3>COMPUTING</h3>
+
+            <p>
+                Understand computer hardware, software
+                and the systems behind digital technology.
+            </p>
+
+            <a href="#computing-lesson" class="hero-button">LEARN MORE</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="explore" id="ai-lesson">
+    <h2>01. <span>ARTIFICIAL INTELLIGENCE</span></h2>
+
+    <div class="card lesson-card">
+
+        <h3>WHAT IS AI?</h3>
+
+        <p>
+            Artificial Intelligence, commonly called AI,
+            is technology that allows computer systems
+            to perform tasks that normally require
+            human intelligence.
+        </p>
+
+        <h3>HOW DOES IT WORK?</h3>
+
+        <p>
+            Many AI systems learn patterns from examples
+            and information called data. They use those
+            patterns to make predictions or produce results.
+        </p>
+
+        <h3>REAL-LIFE EXAMPLES</h3>
+
+        <p>
+            Voice assistants, language translation,
+            image recognition and recommendation systems
+            are examples of AI applications.
+        </p>
+
+    </div>
+</section>
+
+<section class="explore" id="robotics-lesson">
+    <h2>02. <span>ROBOTICS</span></h2>
+
+    <div class="card lesson-card">
+
+        <h3>WHAT IS ROBOTICS?</h3>
+
+        <p>
+            Robotics is a field of engineering and technology
+            focused on designing, building and operating robots.
+        </p>
+
+        <h3>IMPORTANT PARTS OF A ROBOT</h3>
+
+        <p>
+            A robot may contain sensors, motors, a controller
+            and a power source. These parts work together
+            to help it perform tasks.
+        </p>
+
+        <h3>WHERE ARE ROBOTS USED?</h3>
+
+        <p>
+            Robots are used in factories, scientific research,
+            healthcare, space exploration and other areas.
+        </p>
+
+    </div>
+</section>
+
+<section class="explore" id="computing-lesson">
+    <h2>03. <span>COMPUTING</span></h2>
+
+    <div class="card lesson-card">
+
+        <h3>WHAT IS COMPUTING?</h3>
+
+        <p>
+            Computing involves using computers and
+            computational systems to process information
+            and solve problems.
+        </p>
+
+        <h3>HARDWARE AND SOFTWARE</h3>
+
+        <p>
+            Hardware refers to the physical parts of a computer,
+            such as the keyboard, screen and processor.
+            Software refers to the programs that run on it.
+        </p>
+
+        <h3>WHY IS COMPUTING IMPORTANT?</h3>
+
+        <p>
+            Computing helps people communicate, learn,
+            design products, analyze information and
+            develop new technologies.
+        </p>
+
+    </div>
+</section>
+
+<section class="explore">
+    <h2>TEST YOUR <span>KNOWLEDGE</span></h2>
+
+    <div class="card quiz-card">
+
+        <h3>QUESTION 1</h3>
+
+        <p>Which field focuses on designing and building robots?</p>
+
+        <div class="quiz-options">
+
+            <button onclick="checkAnswer(this, false)">
+                Computing
+            </button>
+
+            <button onclick="checkAnswer(this, true)">
+                Robotics
+            </button>
+
+            <button onclick="checkAnswer(this, false)">
+                Photography
+            </button>
+
+        </div>
+
+        <p id="quiz-result" aria-live="polite"></p>
+
+        <button id="reset-button" onclick="resetQuiz()">
+            TRY AGAIN
+        </button>
+
+    </div>
+</section>
+
+<footer>
+    <p><strong>SMART WRLD</strong></p>
+    <p>LEARN • BUILD • GROW</p>
+
+    <p style="margin: 15px 0;">
+        <a href="index.html">Home</a> |
+        <a href="articles.html">Articles</a> |
+        <a href="about.html">About</a> |
+        <a href="contact.html">Contact</a>
+    </p>
+
+    <p>© 2026 SMART WRLD. All Rights Reserved.</p>
+</footer>
+
+<script>
+    function checkAnswer(button, correct) {
+        const result = document.getElementById("quiz-result");
+        const buttons = document.querySelectorAll(".quiz-options button");
+
+        buttons.forEach(function(item) {
+            item.disabled = true;
+        });
+
+        if (correct) {
+            result.textContent = "Correct! Excellent work!";
+            result.style.color = "silver";
+        } else {
+            result.textContent = "Not quite! The correct answer is Robotics.";
+            result.style.color = "orange";
+        }
+    }
+
+    function resetQuiz() {
+        const result = document.getElementById("quiz-result");
+        const buttons = document.querySelectorAll(".quiz-options button");
+
+        result.textContent = "";
+
+        buttons.forEach(function(item) {
+            item.disabled = false;
+        });
+    }
+</script>
+
+</body>
+</html>

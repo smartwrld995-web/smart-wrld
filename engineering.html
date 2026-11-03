@@ -1,0 +1,586 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore mechanical, electrical and civil engineering with SMART WRLD.">
+    <title>Engineering | SMART WRLD</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header nav a {
+            transition: color .3s ease;
+        }
+
+        header nav a:hover {
+            color: silver;
+        }
+
+        .engineering-hero {
+            min-height: 400px;
+            padding: 75px 8%;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(90deg, rgba(0,0,0,.93), rgba(0,0,0,.42)),
+                url("https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1800&q=85");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .engineering-hero-content {
+            max-width: 750px;
+        }
+
+        .engineering-tag {
+            color: silver;
+            letter-spacing: 4px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .engineering-hero h1 {
+            font-size: clamp(38px, 6vw, 65px);
+            line-height: 1.15;
+            margin: 18px 0;
+        }
+
+        .engineering-hero h1 span {
+            color: silver;
+        }
+
+        .engineering-hero p {
+            max-width: 650px;
+            color: #ddd;
+        }
+
+        .topic-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .lesson-card {
+            padding: 30px;
+            line-height: 1.9;
+        }
+
+        .lesson-card h3 {
+            color: silver;
+            margin: 22px 0 8px;
+        }
+
+        .lesson-card h3:first-child {
+            margin-top: 0;
+        }
+
+        .lesson-card p {
+            margin-bottom: 15px;
+        }
+
+        .engineering-highlight {
+            background: #151515;
+            border-left: 4px solid silver;
+            padding: 22px;
+            margin-top: 25px;
+        }
+
+        .engineering-highlight h3 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .quiz-card {
+            padding: 25px;
+        }
+
+        .topic-card .hero-button {
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        @media(max-width: 650px) {
+            .engineering-hero {
+                min-height: 350px;
+                padding: 55px 7%;
+            }
+
+            .topic-card img {
+                height: 185px;
+            }
+
+            .lesson-card {
+                padding: 20px;
+            }
+
+            header nav {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">SMART <span>WRLD</span></div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="technology.html">Technology</a>
+        <a href="engineering.html">Engineering</a>
+        <a href="learn.html">Learn</a>
+        <a href="articles.html">Articles</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="engineering-hero">
+    <div class="engineering-hero-content">
+
+        <span class="engineering-tag">
+            ENGINEERING • INNOVATION • DESIGN
+        </span>
+
+        <h1>UNDERSTANDING <span>ENGINEERING</span></h1>
+
+        <p>
+            Explore the science behind machines, structures,
+            electrical systems and modern infrastructure.
+            Discover how engineers turn ideas into reality.
+        </p>
+
+        <a href="#disciplines" class="hero-button">
+            EXPLORE ENGINEERING
+        </a>
+
+    </div>
+</section>
+
+<section class="about">
+    <p class="welcome">DESIGN • CREATE • INNOVATE</p>
+
+    <h2>BUILDING THE <span>FUTURE</span></h2>
+
+    <p>
+        Engineering applies scientific principles, mathematics
+        and technical knowledge to design, develop and improve
+        systems, machines, structures and processes.
+    </p>
+</section>
+
+<section class="explore" id="disciplines">
+
+    <h2>MAJOR ENGINEERING <span>DISCIPLINES</span></h2>
+
+    <div class="cards">
+
+        <div class="card topic-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1000&q=85"
+                alt="Mechanical engineering workshop"
+                loading="lazy"
+            >
+
+            <h3>MECHANICAL ENGINEERING</h3>
+
+            <p>
+                Explore the design, analysis, manufacturing
+                and maintenance of machines and mechanical systems.
+            </p>
+
+            <a href="#mechanical" class="hero-button">EXPLORE FIELD</a>
+
+        </div>
+
+        <div class="card topic-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1000&q=85"
+                alt="Electrical power transmission"
+                loading="lazy"
+            >
+
+            <h3>ELECTRICAL ENGINEERING</h3>
+
+            <p>
+                Discover electricity, electronics, power generation,
+                transmission and control systems.
+            </p>
+
+            <a href="#electrical" class="hero-button">EXPLORE FIELD</a>
+
+        </div>
+
+        <div class="card topic-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1000&q=85"
+                alt="Civil engineering construction project"
+                loading="lazy"
+            >
+
+            <h3>CIVIL ENGINEERING</h3>
+
+            <p>
+                Learn how engineers design and develop buildings,
+                bridges, roads and other infrastructure.
+            </p>
+
+            <a href="#civil" class="hero-button">EXPLORE FIELD</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- MECHANICAL ENGINEERING -->
+
+<section class="explore" id="mechanical">
+
+    <h2>01. <span>MECHANICAL ENGINEERING</span></h2>
+
+    <div class="card lesson-card">
+
+        <img
+            class="article-image"
+            src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1400&q=85"
+            alt="Mechanical engineering and industrial equipment"
+            loading="lazy"
+        >
+
+        <h3>FIELD OVERVIEW</h3>
+
+        <p>
+            Mechanical engineering involves the application
+            of engineering mechanics, thermodynamics, fluid
+            mechanics and materials science to the development
+            of machines and mechanical systems.
+        </p>
+
+        <h3>CORE AREAS OF STUDY</h3>
+
+        <p>
+            <strong>Engineering Mechanics:</strong>
+            The study of forces, motion and the behaviour
+            of physical bodies under different loading conditions.
+        </p>
+
+        <p>
+            <strong>Thermodynamics:</strong>
+            The study of heat, energy, temperature and
+            their transformation into useful work.
+        </p>
+
+        <p>
+            <strong>Machine Design:</strong>
+            The process of developing mechanical components
+            and systems that satisfy specified performance,
+            safety and reliability requirements.
+        </p>
+
+        <p>
+            <strong>Manufacturing Engineering:</strong>
+            The application of processes and technologies
+            used to convert raw materials into finished products.
+        </p>
+
+        <h3>INDUSTRIAL APPLICATIONS</h3>
+
+        <p>
+            Mechanical engineers contribute to automotive
+            production, aerospace systems, power generation,
+            industrial automation, manufacturing and
+            heating and cooling systems.
+        </p>
+
+        <h3>REAL-WORLD EXAMPLE</h3>
+
+        <p>
+            An automotive engineer may analyse the forces
+            acting on a vehicle's suspension system to improve
+            stability, comfort and durability.
+        </p>
+
+        <div class="engineering-highlight">
+            <h3>ENGINEERING INSIGHT</h3>
+            <p>
+                Mechanical engineering connects physics,
+                mathematics and creativity to solve real-world
+                mechanical problems.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ELECTRICAL ENGINEERING -->
+
+<section class="explore" id="electrical">
+
+    <h2>02. <span>ELECTRICAL ENGINEERING</span></h2>
+
+    <div class="card lesson-card">
+
+        <img
+            class="article-image"
+            src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1400&q=85"
+            alt="Electrical power infrastructure"
+            loading="lazy"
+        >
+
+        <h3>FIELD OVERVIEW</h3>
+
+        <p>
+            Electrical engineering focuses on the generation,
+            transmission, distribution and application of
+            electrical energy. It also includes the design
+            and analysis of electronic and control systems.
+        </p>
+
+        <h3>CORE AREAS OF STUDY</h3>
+
+        <p>
+            <strong>Circuit Theory:</strong>
+            The analysis of voltage, current, resistance
+            and power in electrical networks.
+        </p>
+
+        <p>
+            <strong>Power Systems:</strong>
+            The study of electrical generation, transmission,
+            distribution and protection.
+        </p>
+
+        <p>
+            <strong>Electronics:</strong>
+            The design and application of components such
+            as diodes, transistors, integrated circuits
+            and electronic devices.
+        </p>
+
+        <p>
+            <strong>Control Systems:</strong>
+            The study of systems designed to regulate
+            the behaviour and output of machines
+            and industrial processes.
+        </p>
+
+        <h3>INDUSTRIAL APPLICATIONS</h3>
+
+        <p>
+            Electrical engineers work in renewable energy,
+            telecommunications, industrial automation,
+            power utilities, electronics manufacturing
+            and electrical infrastructure.
+        </p>
+
+        <h3>REAL-WORLD EXAMPLE</h3>
+
+        <p>
+            An electrical engineer may design a solar power
+            system that converts sunlight into electrical
+            energy and manages its distribution to connected
+            equipment.
+        </p>
+
+        <div class="engineering-highlight">
+            <h3>ENGINEERING INSIGHT</h3>
+            <p>
+                Electrical engineering helps power homes,
+                industries, communication networks and
+                modern technology.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CIVIL ENGINEERING -->
+
+<section class="explore" id="civil">
+
+    <h2>03. <span>CIVIL ENGINEERING</span></h2>
+
+    <div class="card lesson-card">
+
+        <img
+            class="article-image"
+            src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1400&q=85"
+            alt="Civil engineering construction project"
+            loading="lazy"
+        >
+
+        <h3>FIELD OVERVIEW</h3>
+
+        <p>
+            Civil engineering is concerned with the planning,
+            design, construction and maintenance of the
+            physical infrastructure required by society.
+            It combines mathematics, structural analysis,
+            materials science and environmental principles.
+        </p>
+
+        <h3>CORE AREAS OF STUDY</h3>
+
+        <p>
+            <strong>Structural Engineering:</strong>
+            The analysis and design of structures to ensure
+            they can safely resist applied loads and
+            environmental conditions.
+        </p>
+
+        <p>
+            <strong>Geotechnical Engineering:</strong>
+            The study of soil and rock behaviour to support
+            foundations, retaining structures and other
+            construction works.
+        </p>
+
+        <p>
+            <strong>Transportation Engineering:</strong>
+            The planning and development of roads, highways,
+            railways and transportation networks.
+        </p>
+
+        <p>
+            <strong>Environmental Engineering:</strong>
+            The application of engineering methods to
+            water treatment, waste management and
+            environmental protection.
+        </p>
+
+        <h3>INDUSTRIAL APPLICATIONS</h3>
+
+        <p>
+            Civil engineers contribute to building construction,
+            bridge development, highway projects, drainage
+            systems, water supply networks and urban planning.
+        </p>
+
+        <h3>REAL-WORLD EXAMPLE</h3>
+
+        <p>
+            A structural engineer may calculate the loads
+            acting on a bridge and select suitable materials
+            and structural elements to meet safety and
+            performance requirements.
+        </p>
+
+        <div class="engineering-highlight">
+            <h3>ENGINEERING INSIGHT</h3>
+            <p>
+                Civil engineering helps create the infrastructure
+                that connects communities and supports society.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ENGINEERING QUIZ -->
+
+<section class="explore">
+
+    <h2>ENGINEERING <span>KNOWLEDGE TEST</span></h2>
+
+    <div class="card quiz-card">
+
+        <h3>QUESTION 1</h3>
+
+        <p>
+            Which engineering discipline primarily focuses
+            on thermodynamics, machine design and mechanics?
+        </p>
+
+        <div class="quiz-options">
+
+            <button onclick="checkAnswer(this, false)">
+                Civil Engineering
+            </button>
+
+            <button onclick="checkAnswer(this, true)">
+                Mechanical Engineering
+            </button>
+
+            <button onclick="checkAnswer(this, false)">
+                Electrical Engineering
+            </button>
+
+        </div>
+
+        <p id="quiz-result" aria-live="polite"></p>
+
+        <button id="reset-button" onclick="resetQuiz()">
+            TRY AGAIN
+        </button>
+
+    </div>
+
+</section>
+
+<footer>
+    <p><strong>SMART WRLD</strong></p>
+    <p>LEARN • BUILD • GROW</p>
+
+    <p style="margin: 15px 0;">
+        <a href="index.html">Home</a> |
+        <a href="articles.html">Articles</a> |
+        <a href="about.html">About</a> |
+        <a href="contact.html">Contact</a>
+    </p>
+
+    <p>© 2026 SMART WRLD. All Rights Reserved.</p>
+</footer>
+
+<script>
+    function checkAnswer(button, correct) {
+
+        const result = document.getElementById("quiz-result");
+        const buttons = document.querySelectorAll(".quiz-options button");
+
+        buttons.forEach(function(item) {
+            item.disabled = true;
+        });
+
+        if (correct) {
+            result.textContent = "Correct! Excellent engineering knowledge.";
+            result.style.color = "silver";
+        } else {
+            result.textContent =
+                "Not quite. The correct answer is Mechanical Engineering.";
+            result.style.color = "orange";
+        }
+    }
+
+    function resetQuiz() {
+
+        const result = document.getElementById("quiz-result");
+        const buttons = document.querySelectorAll(".quiz-options button");
+
+        result.textContent = "";
+
+        buttons.forEach(function(item) {
+            item.disabled = false;
+        });
+    }
+</script>
+
+</body>
+</html>

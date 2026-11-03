@@ -1,0 +1,1136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="SMART WRLD is a learning platform for technology, science, engineering, computing and practical digital skills.">
+
+    <title>SMART WRLD | Learn • Build • Grow</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* GENERAL IMPROVEMENTS */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        section {
+            scroll-margin-top: 90px;
+        }
+
+        /* HEADER AND MOBILE MENU */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(8, 8, 8, 0.97);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #292929;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: transparent;
+            border: 1px solid #666;
+            border-radius: 5px;
+            padding: 9px;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background: silver;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        /* HERO SECTION */
+
+        .hero {
+            min-height: 570px;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            align-items: center;
+            gap: 45px;
+            padding: 80px 8%;
+            background:
+                radial-gradient(circle at 80% 30%, #292929 0%, transparent 40%),
+                #080808;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .welcome {
+            color: silver;
+            letter-spacing: 4px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 5vw, 68px);
+            line-height: 1.08;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 span {
+            color: silver;
+        }
+
+        .hero .description {
+            color: #bbb;
+            line-height: 1.9;
+            max-width: 520px;
+            margin-bottom: 32px;
+        }
+
+        .hero-image {
+            width: 100%;
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 390px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 1px solid #555;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-image::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            pointer-events: none;
+        }
+
+        /* BUTTONS */
+
+        .hero-button {
+            display: inline-block;
+            background: #d0d0d0;
+            color: #080808;
+            padding: 14px 25px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .hero-button:hover {
+            background: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+        }
+
+        /* SEARCH SECTION */
+
+        .search-section {
+            padding: 75px 8%;
+            text-align: center;
+            background: #111;
+            border-top: 1px solid #292929;
+            border-bottom: 1px solid #292929;
+        }
+
+        .search-section h2,
+        .about h2,
+        .featured-articles h2,
+        .explore h2 {
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .search-section h2 span,
+        .about h2 span,
+        .featured-articles h2 span,
+        .explore h2 span {
+            color: silver;
+        }
+
+        .search-intro {
+            color: #aaa;
+            margin-bottom: 30px;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 10px;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .search-box input {
+            flex: 1;
+            min-width: 0;
+            padding: 16px;
+            border: 1px solid #666;
+            border-radius: 5px;
+            background: #1a1a1a;
+            color: white;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .search-box input:focus {
+            border-color: white;
+        }
+
+        .search-box button {
+            border: none;
+            cursor: pointer;
+        }
+
+        #searchResult {
+            color: silver;
+            margin-top: 20px;
+            min-height: 22px;
+        }
+
+        /* ABOUT SECTION */
+
+        .about {
+            padding: 80px 8%;
+            text-align: center;
+            background: #090909;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .about-content p {
+            color: #aaa;
+            line-height: 2;
+            font-size: 16px;
+        }
+
+        .about-tagline {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 22px;
+            border: 1px solid #666;
+            color: silver;
+            letter-spacing: 3px;
+            font-size: 13px;
+        }
+
+        /* FEATURED ARTICLES */
+
+        .featured-articles {
+            padding: 85px 8%;
+            text-align: center;
+            border-top: 1px solid #292929;
+            background: #0d0d0d;
+        }
+
+        .featured-intro {
+            color: silver;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 22px;
+            text-align: left;
+        }
+
+        .article-card {
+            background: #151515;
+            border: 1px solid #383838;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-card:hover {
+            transform: translateY(-7px);
+            border-color: silver;
+        }
+
+        .article-card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .article-content {
+            padding: 23px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .article-category {
+            color: silver;
+            font-size: 11px;
+            letter-spacing: 2px;
+            margin-bottom: 13px;
+        }
+
+        .article-content h3 {
+            color: white;
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 13px;
+        }
+
+        .article-content p {
+            color: #aaa;
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 22px;
+            flex: 1;
+        }
+
+        .article-link {
+            display: inline-block;
+            width: fit-content;
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid silver;
+            padding-bottom: 6px;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .article-link:hover {
+            color: silver;
+        }
+
+        .all-articles {
+            margin-top: 45px;
+        }
+
+        /* EXPLORE SECTION */
+
+        .explore {
+            padding: 85px 8%;
+            text-align: center;
+            background: #090909;
+            border-top: 1px solid #292929;
+        }
+
+        .explore-intro {
+            color: #aaa;
+            margin-bottom: 40px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: #151515;
+            border: 1px solid #444;
+            border-radius: 10px;
+            padding: 38px 25px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: silver;
+        }
+
+        .card h3 {
+            color: silver;
+            margin-bottom: 18px;
+            letter-spacing: 2px;
+        }
+
+        .card p {
+            color: #aaa;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        /* CALL TO ACTION */
+
+        .final-cta {
+            padding: 75px 8%;
+            text-align: center;
+            background: linear-gradient(120deg, #202020, #090909);
+            border-top: 1px solid #444;
+        }
+
+        .final-cta h2 {
+            font-size: clamp(25px, 4vw, 38px);
+            margin-bottom: 15px;
+        }
+
+        .final-cta p {
+            color: #aaa;
+            line-height: 1.8;
+            margin-bottom: 28px;
+        }
+
+        /* FOOTER */
+
+        .site-footer {
+            background: #101010;
+            border-top: 1px solid #444;
+            padding: 65px 8% 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1.3fr;
+            gap: 45px;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .footer-brand {
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 18px;
+        }
+
+        .footer-brand span {
+            color: silver;
+        }
+
+        .footer-column h3 {
+            color: silver;
+            font-size: 14px;
+            letter-spacing: 2px;
+            margin-bottom: 22px;
+        }
+
+        .footer-column p {
+            color: #999;
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column li {
+            margin-bottom: 13px;
+        }
+
+        .footer-column a {
+            color: #aaa;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            max-width: 1150px;
+            margin: 45px auto 0;
+            padding-top: 22px;
+            border-top: 1px solid #303030;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            color: #777;
+            font-size: 12px;
+            letter-spacing: 1px;
+            line-height: 1.8;
+        }
+
+        /* TABLET */
+
+        @media (max-width: 1000px) {
+            .article-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero {
+                gap: 30px;
+            }
+
+            .hero-image img {
+                height: 330px;
+            }
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 15px;
+                padding: 18px 5%;
+            }
+
+            .menu-toggle {
+                display: block;
+                z-index: 1002;
+            }
+
+            header nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #101010;
+                border-bottom: 1px solid #555;
+                padding: 15px 5% 20px;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 5px;
+            }
+
+            header nav.open {
+                display: flex;
+            }
+
+            header nav a {
+                display: block;
+                width: 100%;
+                padding: 14px;
+                margin: 0;
+                text-align: center;
+                border-radius: 5px;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 65px 6%;
+                text-align: center;
+            }
+
+            .hero-content {
+                margin: auto;
+            }
+
+            .hero .description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-image img {
+                height: 280px;
+            }
+
+            .search-section,
+            .about,
+            .featured-articles,
+            .explore {
+                padding: 60px 6%;
+            }
+
+            .article-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .article-card img {
+                height: 210px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .site-footer {
+                padding: 45px 7% 20px;
+            }
+
+            .footer-bottom {
+                margin-top: 30px;
+            }
+        }
+
+        @media (max-width: 450px) {
+            .search-box {
+                flex-direction: column;
+            }
+
+            .search-box button {
+                width: 100%;
+            }
+
+            .hero-image img {
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">SMART <span>WRLD</span></div>
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mainNav"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="mainNav">
+            <a href="index.html">Home</a>
+            <a href="technology.html">Technology</a>
+            <a href="engineering.html">Engineering</a>
+            <a href="learn.html">Learn</a>
+            <a href="articles.html">Articles</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="welcome">WELCOME TO THE FUTURE</p>
+
+            <h1>
+                THINK BIG.<br>
+                BUILD THE <span>FUTURE.</span>
+            </h1>
+
+            <p class="description">
+                Discover technology, science, creativity and innovation.
+                Learn new skills, understand how things work and turn
+                your curiosity into knowledge.
+            </p>
+
+            <a href="learn.html" class="hero-button">
+                START LEARNING
+            </a>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1000"
+                alt="Detailed computer circuit board"
+            >
+
+        </div>
+
+    </section>
+
+    <!-- SEARCH -->
+
+    <section class="search-section" id="search">
+
+        <h2>SEARCH <span>SMART WRLD</span></h2>
+
+        <p class="search-intro">
+            What would you like to discover today?
+        </p>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Try AI, robotics, science, hardware..."
+                aria-label="Search learning topics"
+            >
+
+            <button
+                onclick="searchWebsite()"
+                class="hero-button"
+            >
+                SEARCH
+            </button>
+
+        </div>
+
+        <p id="searchResult" aria-live="polite"></p>
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section class="about" id="about">
+
+        <div class="about-content">
+
+            <h2>ABOUT <span>SMART WRLD</span></h2>
+
+            <p>
+                SMART WRLD is a learning space built around curiosity,
+                knowledge and innovation. We explore technology,
+                engineering, science, computing and practical digital skills.
+            </p>
+
+            <p>
+                Our goal is simple: make learning easier to understand
+                and inspire people to turn ideas into useful skills.
+            </p>
+
+            <div class="about-tagline">
+                LEARN • BUILD • GROW
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FEATURED ARTICLES -->
+
+    <section class="featured-articles">
+
+        <h2>FEATURED <span>ARTICLES</span></h2>
+
+        <p class="featured-intro">
+            Explore ideas, discover knowledge and understand the world around you.
+        </p>
+
+        <div class="article-grid">
+
+            <div class="article-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800"
+                    alt="Artificial intelligence technology"
+                    loading="lazy"
+                >
+
+                <div class="article-content">
+
+                    <p class="article-category">TECHNOLOGY</p>
+
+                    <h3>Understanding Artificial Intelligence</h3>
+
+                    <p>
+                        Discover how AI works, where it is used and how
+                        intelligent machines are changing our world.
+                    </p>
+
+                    <a href="article-ai.html" class="article-link">
+                        READ ARTICLE →
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="article-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800"
+                    alt="Mechanical engineering and machinery"
+                    loading="lazy"
+                >
+
+                <div class="article-content">
+
+                    <p class="article-category">ENGINEERING</p>
+
+                    <h3>How Mechanical Systems Work</h3>
+
+                    <p>
+                        Learn about gears, levers, bearings and the
+                        mechanical systems used in everyday machines.
+                    </p>
+
+                    <a href="article-mechanical.html" class="article-link">
+                        READ ARTICLE →
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="article-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800"
+                    alt="Science laboratory equipment"
+                    loading="lazy"
+                >
+
+                <div class="article-content">
+
+                    <p class="article-category">SCIENCE</p>
+
+                    <h3>Exploring the Scientific Method</h3>
+
+                    <p>
+                        Discover how scientists ask questions, test ideas
+                        and use evidence to understand the world.
+                    </p>
+
+                    <a href="article-science.html" class="article-link">
+                        READ ARTICLE →
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="article-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800"
+                    alt="Computer hardware and circuit board"
+                    loading="lazy"
+                >
+
+                <div class="article-content">
+
+                    <p class="article-category">COMPUTING</p>
+
+                    <h3>Computer Hardware Explained</h3>
+
+                    <p>
+                        Understand the CPU, RAM, motherboard, storage
+                        and other important computer components.
+                    </p>
+
+                    <a href="article-hardware.html" class="article-link">
+                        READ ARTICLE →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="all-articles">
+
+            <a href="articles.html" class="hero-button">
+                EXPLORE ALL ARTICLES
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- EXPLORE YOUR POTENTIAL -->
+
+    <section class="explore">
+
+        <h2>EXPLORE YOUR <span>POTENTIAL</span></h2>
+
+        <p class="explore-intro">
+            Choose an area and start building your knowledge.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>TECHNOLOGY</h3>
+
+                <p>
+                    Discover artificial intelligence, robotics,
+                    computing and modern innovations.
+                </p>
+
+                <a href="technology.html" class="hero-button">
+                    EXPLORE
+                </a>
+
+            </div>
+
+            <div class="card">
+
+                <h3>ENGINEERING</h3>
+
+                <p>
+                    Explore machines, electronics, structures
+                    and engineering concepts.
+                </p>
+
+                <a href="engineering.html" class="hero-button">
+                    EXPLORE
+                </a>
+
+            </div>
+
+            <div class="card">
+
+                <h3>LEARNING</h3>
+
+                <p>
+                    Develop knowledge, improve your skills
+                    and discover useful new ideas.
+                </p>
+
+                <a href="learn.html" class="hero-button">
+                    EXPLORE
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FINAL CALL TO ACTION -->
+
+    <section class="final-cta">
+
+        <h2>YOUR JOURNEY STARTS HERE.</h2>
+
+        <p>
+            Stay curious. Keep learning. Turn your ideas into possibilities.
+        </p>
+
+        <a href="articles.html" class="hero-button">
+            DISCOVER MORE
+        </a>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+        <div class="footer-grid">
+
+            <div class="footer-column">
+
+                <div class="footer-brand">
+                    SMART <span>WRLD</span>
+                </div>
+
+                <p>
+                    A world of technology, science, engineering
+                    and knowledge. Discover new ideas, develop
+                    useful skills and build a better future.
+                </p>
+
+                <p style="color:silver; margin-top:18px; letter-spacing:2px;">
+                    LEARN • BUILD • GROW
+                </p>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h3>QUICK LINKS</h3>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="engineering.html">Engineering</a></li>
+                    <li><a href="learn.html">Learning Centre</a></li>
+                    <li><a href="articles.html">Article Library</a></li>
+                    <li><a href="about.html">About SMART WRLD</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h3>EXPLORE ARTICLES</h3>
+
+                <ul>
+                    <li><a href="article-ai.html">Artificial Intelligence</a></li>
+                    <li><a href="article-mechanical.html">Mechanical Systems</a></li>
+                    <li><a href="article-science.html">Scientific Method</a></li>
+                    <li><a href="article-hardware.html">Computer Hardware</a></li>
+                    <li><a href="articles.html">View All Articles</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                SMART WRLD © 2026. ALL RIGHTS RESERVED.
+            </p>
+
+            <p>
+                LEARN • BUILD • GROW
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        // MOBILE MENU
+
+        const menuToggle = document.getElementById("menuToggle");
+        const mainNav = document.getElementById("mainNav");
+
+        menuToggle.addEventListener("click", function() {
+
+            const isOpen = mainNav.classList.toggle("open");
+
+            menuToggle.classList.toggle("active", isOpen);
+
+            menuToggle.setAttribute("aria-expanded", isOpen);
+
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen ? "Close navigation menu" : "Open navigation menu"
+            );
+
+        });
+
+        // CLOSE MENU AFTER CLICKING A LINK
+
+        mainNav.querySelectorAll("a").forEach(function(link) {
+
+            link.addEventListener("click", function() {
+
+                mainNav.classList.remove("open");
+                menuToggle.classList.remove("active");
+
+                menuToggle.setAttribute("aria-expanded", "false");
+
+                menuToggle.setAttribute(
+                    "aria-label",
+                    "Open navigation menu"
+                );
+
+            });
+
+        });
+
+        // WEBSITE SEARCH
+
+        function searchWebsite() {
+
+            const input = document.getElementById("searchInput");
+            const result = document.getElementById("searchResult");
+
+            const topic = input.value.trim().toLowerCase();
+
+            if (topic === "") {
+
+                result.textContent = "Please enter a topic to search.";
+                return;
+
+            }
+
+            const topics = {
+
+                "technology": "technology.html",
+                "artificial intelligence": "technology.html",
+                "ai": "technology.html",
+                "robotics": "technology.html",
+                "computing": "technology.html",
+                "computers": "technology.html",
+
+                "engineering": "engineering.html",
+                "mechanical engineering": "engineering.html",
+                "electrical engineering": "engineering.html",
+                "civil engineering": "engineering.html",
+                "electronics": "engineering.html",
+                "machines": "engineering.html",
+                "mechanical systems": "article-mechanical.html",
+
+                "learning": "learn.html",
+                "science": "learn.html",
+                "digital skills": "learn.html",
+                "general knowledge": "learn.html",
+                "scientific method": "article-science.html",
+
+                "articles": "articles.html",
+                "article library": "articles.html",
+                "hardware": "article-hardware.html",
+                "computer hardware": "article-hardware.html"
+
+            };
+
+            if (topics[topic]) {
+
+                result.textContent = "Topic found! Opening your lesson...";
+
+                window.location.href = topics[topic];
+
+            } else {
+
+                result.textContent =
+                    "Sorry, we couldn't find that topic. Try AI, robotics, science or engineering.";
+
+            }
+
+        }
+
+        // SEARCH USING ENTER KEY
+
+        document.getElementById("searchInput").addEventListener(
+            "keydown",
+            function(event) {
+
+                if (event.key === "Enter") {
+                    searchWebsite();
+                }
+
+            }
+        );
+
+    </script>
+
+</body>
+</html>

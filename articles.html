@@ -1,0 +1,415 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Library | SMART WRLD</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .library-hero {
+            padding: 65px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #080808, #292929, #080808);
+            border-bottom: 1px solid silver;
+        }
+
+        .library-hero h1 {
+            font-size: clamp(28px, 5vw, 46px);
+        }
+
+        .library-hero h1 span {
+            color: silver;
+        }
+
+        .library-hero p {
+            max-width: 750px;
+            margin: 15px auto;
+            line-height: 1.8;
+        }
+
+        #articleSearch {
+            display: block;
+            width: min(100%, 550px);
+            margin: 25px auto;
+            padding: 14px;
+            border: 1px solid silver;
+            border-radius: 6px;
+            background: #151515;
+            color: white;
+            font-size: 16px;
+        }
+
+        #articleSearch::placeholder {
+            color: #aaa;
+        }
+
+        .article-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 25px 0;
+        }
+
+        .filter-button {
+            padding: 10px 17px;
+            border: 1px solid silver;
+            border-radius: 5px;
+            background: transparent;
+            color: silver;
+            cursor: pointer;
+        }
+
+        .filter-button:hover,
+        .filter-button.active {
+            background: silver;
+            color: black;
+        }
+
+        .article-card {
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .article-card img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+        }
+
+        .article-content {
+            padding: 18px;
+        }
+
+        .article-category {
+            color: silver;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        .article-link {
+            display: inline-block;
+            margin-top: 12px;
+        }
+
+        .site-footer {
+            padding: 35px 20px;
+            background: #080808;
+            border-top: 1px solid #555;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 22px;
+            margin: 20px 0;
+        }
+
+        .footer-links a {
+            color: silver;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .library-hero {
+                padding: 45px 15px;
+            }
+
+            .footer-links {
+                gap: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">SMART <span>WRLD</span></div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="technology.html">Technology</a>
+            <a href="engineering.html">Engineering</a>
+            <a href="learn.html">Learn</a>
+            <a href="articles.html">Articles</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+
+    <section class="library-hero">
+
+        <p class="welcome">KNOWLEDGE • IDEAS • DISCOVERY</p>
+
+        <h1>THE SMART WRLD <span>ARTICLE LIBRARY</span></h1>
+
+        <p>
+            Explore educational articles covering technology,
+            engineering, science, computing and practical
+            digital skills. Discover new ideas and build
+            your knowledge with every visit.
+        </p>
+
+    </section>
+
+    <!-- ARTICLE LIBRARY -->
+
+    <section class="explore">
+
+        <h2>DISCOVER <span>NEW IDEAS</span></h2>
+
+        <input
+            type="text"
+            id="articleSearch"
+            placeholder="Search articles..."
+            aria-label="Search articles"
+        >
+
+        <div class="article-filters">
+
+            <button class="filter-button active"
+                onclick="filterArticles('all', this)">
+                ALL
+            </button>
+
+            <button class="filter-button"
+                onclick="filterArticles('technology', this)">
+                TECHNOLOGY
+            </button>
+
+            <button class="filter-button"
+                onclick="filterArticles('engineering', this)">
+                ENGINEERING
+            </button>
+
+            <button class="filter-button"
+                onclick="filterArticles('science', this)">
+                SCIENCE
+            </button>
+
+            <button class="filter-button"
+                onclick="filterArticles('computing', this)">
+                COMPUTING
+            </button>
+
+        </div>
+
+        <div class="article-grid" id="articleGrid">
+
+            <!-- ARTICLE 1 -->
+
+            <article class="article-card" data-category="technology">
+
+                <img
+                    src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800"
+                    alt="Artificial intelligence technology"
+                >
+
+                <div class="article-content">
+
+                    <span class="article-category">TECHNOLOGY</span>
+
+                    <h3>Understanding Artificial Intelligence</h3>
+
+                    <p>
+                        Discover how artificial intelligence
+                        works and how it is transforming modern life.
+                    </p>
+
+                    <a href="article-ai.html" class="article-link">
+                        READ ARTICLE →
+                    </a>
+
+                </div>
+
+            </article>
+
+            <!-- ARTICLE 2 -->
+
+            <article class="article-card" data-category="engineering">
+
+                <img
+                    src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800"
+                    alt="Engineering equipment"
+                >
+
+                <div class="article-content">
+
+                    <span class="article-category">ENGINEERING</span>
+
+                    <h3>How Mechanical Systems Work</h3>
+
+                    <p>
+                        Explore the principles of motion,
+                        mechanical components and machine design.
+                    </p>
+
+                    <a href="article-mechanical.html" class="article-link">
+                        READ ARTICLE →
+                    </a>
+
+                </div>
+
+            </article>
+
+            <!-- ARTICLE 3 -->
+
+            <article class="article-card" data-category="science">
+
+                <img
+                    src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800"
+                    alt="Scientific laboratory"
+                >
+
+                <div class="article-content">
+
+                    <span class="article-category">SCIENCE</span>
+
+                    <h3>Exploring the Scientific Method</h3>
+
+                    <p>
+                        Learn how scientists investigate questions,
+                        test ideas and develop reliable knowledge.
+                    </p>
+
+                    <a href="article-science.html" class="article-link">
+                        READ ARTICLE →
+                    </a>
+
+                </div>
+
+            </article>
+
+            <!-- ARTICLE 4 -->
+
+            <article class="article-card" data-category="computing">
+
+                <img
+                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800"
+                    alt="Computer circuit board"
+                >
+
+                <div class="article-content">
+
+                    <span class="article-category">COMPUTING</span>
+
+                    <h3>Computer Hardware Explained</h3>
+
+                    <p>
+                        Understand processors, memory,
+                        storage and the components inside a computer.
+                    </p>
+
+                    <a href="article-hardware.html" class="article-link">
+                        READ ARTICLE →
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+        <p id="noArticles"
+            style="display:none; color:silver; margin-top:30px;">
+            No matching articles found.
+        </p>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+        <div class="logo">SMART <span>WRLD</span></div>
+
+        <p>LEARN • BUILD • GROW</p>
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="technology.html">Technology</a>
+            <a href="engineering.html">Engineering</a>
+            <a href="learn.html">Learn</a>
+            <a href="articles.html">Articles</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <p>SMART WRLD © 2026 | All Rights Reserved</p>
+
+    </footer>
+
+    <!-- SEARCH AND FILTER SYSTEM -->
+
+    <script>
+
+        const searchInput = document.getElementById("articleSearch");
+        const articles = document.querySelectorAll(".article-card");
+
+        let currentCategory = "all";
+
+        function updateArticles() {
+
+            const searchText = searchInput.value.toLowerCase();
+            let visibleCount = 0;
+
+            articles.forEach(function(article) {
+
+                const category = article.dataset.category;
+                const content = article.textContent.toLowerCase();
+
+                const matchesCategory =
+                    currentCategory === "all" ||
+                    category === currentCategory;
+
+                const matchesSearch = content.includes(searchText);
+
+                if (matchesCategory && matchesSearch) {
+                    article.style.display = "block";
+                    visibleCount++;
+                } else {
+                    article.style.display = "none";
+                }
+
+            });
+
+            document.getElementById("noArticles").style.display =
+                visibleCount === 0 ? "block" : "none";
+
+        }
+
+        function filterArticles(category, button) {
+
+            currentCategory = category;
+
+            document.querySelectorAll(".filter-button").forEach(function(item) {
+                item.classList.remove("active");
+            });
+
+            button.classList.add("active");
+
+            updateArticles();
+
+        }
+
+        searchInput.addEventListener("input", updateArticles);
+
+    </script>
+
+</body>
+</html>

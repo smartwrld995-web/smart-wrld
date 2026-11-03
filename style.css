@@ -1,0 +1,663 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    border-bottom: 1px solid #292929;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.logo span,
+.hero h1 span,
+.about h2 span,
+.explore h2 span {
+    color: silver;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 80px 8%;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.welcome {
+    color: silver;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 65px);
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.description {
+    color: #aaa;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.hero-button {
+    display: inline-block;
+    background: silver;
+    color: black;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+.hero-image {
+    width: 48%;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 8px;
+    filter: grayscale(30%);
+    box-shadow: 0 0 35px #333;
+}
+
+.about,
+.explore {
+    text-align: center;
+    padding: 90px 8%;
+    border-top: 1px solid #292929;
+}
+
+.about h2,
+.explore h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.about p {
+    max-width: 650px;
+    margin: auto;
+    color: #aaa;
+    line-height: 1.8;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 45px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #151515;
+    border: 1px solid #333;
+    padding: 40px 25px;
+    width: 280px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: silver;
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: silver;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.card p {
+    color: #aaa;
+    line-height: 1.7;
+}
+
+.lesson-card {
+    width: 100%;
+    max-width: 850px;
+    margin: auto;
+    text-align: left;
+}
+
+.lesson-card h3:not(:first-child) {
+    margin-top: 30px;
+}
+
+.quiz-card {
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.quiz-card > p {
+    margin: 20px 0;
+}
+
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.quiz-options button,
+#reset-button {
+    background: #222;
+    border: 1px solid silver;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.quiz-options button:hover:not(:disabled),
+#reset-button:hover {
+    background: silver;
+    color: black;
+}
+
+.quiz-options button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#quiz-result {
+    margin: 25px 0;
+    font-weight: bold;
+}
+
+#reset-button {
+    margin-top: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #777;
+    border-top: 1px solid #292929;
+    font-size: 13px;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .lesson-card {
+        text-align: left;
+    }
+
+}
+/* SMART WRLD TECHNOLOGY CARDS */
+
+.topic-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 25px;
+    filter: grayscale(20%);
+}
+
+.topic-card .hero-button {
+    margin-top: 25px;
+}
+
+/* SMART WRLD ARTICLE LIBRARY */
+
+#articleSearch {
+    width: 100%;
+    max-width: 600px;
+    padding: 16px;
+    margin: 30px auto;
+    background: #151515;
+    color: white;
+    border: 1px solid silver;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.article-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 25px 0 40px;
+}
+
+.filter-button {
+    padding: 12px 20px;
+    background: #151515;
+    color: silver;
+    border: 1px solid #444;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.filter-button:hover,
+.filter-button.active {
+    background: silver;
+    color: black;
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    max-width: 1150px;
+    margin: auto;
+    text-align: left;
+}
+
+.article-card {
+    background: #151515;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    border-color: silver;
+}
+
+.article-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.article-content {
+    padding: 25px;
+}
+
+.article-category {
+    color: silver;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.article-content h3 {
+    margin: 18px 0;
+    line-height: 1.5;
+}
+
+.article-content p {
+    color: #aaa;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.article-link {
+    color: silver;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.article-link:hover {
+    color: white;
+}
+
+/* SMART WRLD LONG-FORM ARTICLES */
+
+.article-page {
+    max-width: 1150px;
+    margin: auto;
+    padding: 60px 7%;
+}
+
+.article-heading {
+    max-width: 900px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.article-heading h1 {
+    font-size: clamp(32px, 5vw, 55px);
+    line-height: 1.2;
+    margin: 25px 0;
+}
+
+.article-heading h1 span {
+    color: silver;
+}
+
+.article-intro {
+    color: #bbb;
+    font-size: 17px;
+    line-height: 1.9;
+    max-width: 800px;
+    margin: auto;
+}
+
+.article-meta {
+    color: #777;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+
+.article-hero-image {
+    display: block;
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 65px;
+    filter: grayscale(15%);
+}
+
+.article-body {
+    max-width: 850px;
+    margin: auto;
+}
+
+.article-body h2,
+.article-quiz h2,
+.article-references h2 {
+    color: silver;
+    font-size: 25px;
+    line-height: 1.4;
+    margin: 55px 0 22px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #383838;
+}
+
+.article-body h3 {
+    color: #ddd;
+    font-size: 18px;
+    margin: 32px 0 14px;
+}
+
+.article-body p {
+    color: #bbb;
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+.article-body ul,
+.article-body ol {
+    color: #bbb;
+    line-height: 2;
+    padding-left: 25px;
+    margin: 15px 0 25px;
+}
+
+.article-inline-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 7px;
+    margin: 25px 0 35px;
+    filter: grayscale(15%);
+}
+
+.article-highlight,
+.article-takeaway {
+    background: #151515;
+    border-left: 3px solid silver;
+    padding: 25px;
+    margin: 35px 0;
+    border-radius: 4px;
+}
+
+.article-highlight strong {
+    color: silver;
+    letter-spacing: 2px;
+}
+
+.article-highlight p,
+.article-takeaway p {
+    margin: 12px 0 0;
+}
+
+.article-takeaway h3 {
+    color: silver;
+    margin-top: 0;
+}
+
+.article-quiz {
+    background: #151515;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 30px;
+    margin-top: 65px;
+}
+
+.article-quiz h2 {
+    margin-top: 0;
+}
+
+.article-quiz > p {
+    color: #ccc;
+    line-height: 1.8;
+}
+
+.article-quiz .quiz-options {
+    margin-top: 25px;
+}
+
+.article-quiz .quiz-options button,
+#article-reset {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    color: white;
+    background: #222;
+    border: 1px solid silver;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.article-quiz .quiz-options button:hover:not(:disabled),
+#article-reset:hover {
+    background: silver;
+    color: black;
+}
+
+.article-quiz button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.answer-reference {
+    color: #888;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    margin-top: 25px;
+}
+
+.answer-reference strong {
+    color: silver;
+}
+
+.article-references a {
+    color: silver;
+    text-decoration: none;
+}
+
+.article-references a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.back-to-library {
+    text-align: center;
+    margin: 55px 0 20px;
+}
+
+@media (max-width: 768px) {
+
+    .article-page {
+        padding: 40px 6%;
+    }
+
+    .article-body h2 {
+        font-size: 21px;
+    }
+
+    .article-body p {
+        font-size: 15px;
+    }
+
+    .article-hero-image {
+        max-height: 280px;
+    }
+
+}
+
+/* =================================
+   SMART WRLD PROFESSIONAL NAVIGATION
+================================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(8, 8, 8, 0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #444;
+    padding: 20px 8%;
+}
+
+.logo {
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    letter-spacing: 4px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav a {
+    color: #bbb;
+    text-decoration: none;
+    margin: 0;
+    padding: 11px 16px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: white;
+    background: #1b1b1b;
+    border-color: #777;
+    transform: translateY(-2px);
+}
+
+nav a:focus-visible {
+    outline: 2px solid silver;
+    outline-offset: 3px;
+}
+
+/* MOBILE NAVIGATION */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 18px 5%;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    nav {
+        width: 100%;
+        gap: 8px;
+    }
+
+    nav a {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+}

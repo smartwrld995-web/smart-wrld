@@ -1,0 +1,509 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Centre | SMART WRLD</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .learning-hero {
+            padding: 65px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #080808, #252525, #080808);
+            border-bottom: 1px solid silver;
+        }
+
+        .learning-hero p {
+            max-width: 750px;
+            margin: 15px auto;
+            line-height: 1.8;
+        }
+
+        .learning-hero h1 {
+            font-size: clamp(30px, 5vw, 48px);
+        }
+
+        .learning-hero span,
+        .explore h2 span {
+            color: silver;
+        }
+
+        .topic-card img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .lesson-card {
+            line-height: 1.8;
+        }
+
+        .lesson-card h3 {
+            margin-top: 25px;
+            color: silver;
+        }
+
+        .quiz-options button {
+            margin: 6px;
+            cursor: pointer;
+        }
+
+        .site-footer {
+            padding: 35px 20px;
+            background: #080808;
+            border-top: 1px solid #555;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 22px;
+            margin: 20px 0;
+        }
+
+        .footer-links a {
+            color: silver;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .learning-hero {
+                padding: 45px 15px;
+            }
+
+            .footer-links {
+                gap: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">SMART <span>WRLD</span></div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="technology.html">Technology</a>
+            <a href="engineering.html">Engineering</a>
+            <a href="learn.html">Learn</a>
+            <a href="articles.html">Articles</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="learning-hero">
+        <p class="welcome">KNOWLEDGE • DISCOVERY • DEVELOPMENT</p>
+
+        <h1>WELCOME TO THE <span>LEARNING CENTRE</span></h1>
+
+        <p>
+            Knowledge is the foundation of innovation.
+            Explore scientific principles, develop digital
+            competencies, strengthen mathematical reasoning
+            and expand your understanding of the world.
+        </p>
+    </section>
+
+    <!-- LEARNING CATEGORIES -->
+
+    <section class="explore">
+
+        <h2>EXPLORE YOUR <span>KNOWLEDGE</span></h2>
+
+        <div class="cards">
+
+            <div class="card topic-card">
+                <img
+                    src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800"
+                    alt="Scientific laboratory equipment">
+
+                <h3>SCIENCE</h3>
+
+                <p>
+                    Study the natural world through observation,
+                    experimentation and evidence-based reasoning.
+                </p>
+
+                <a href="#science" class="hero-button">EXPLORE</a>
+            </div>
+
+            <div class="card topic-card">
+                <img
+                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800"
+                    alt="Computer and digital technology">
+
+                <h3>DIGITAL SKILLS</h3>
+
+                <p>
+                    Develop practical competencies in computer
+                    operation, software, internet use and digital
+                    communication.
+                </p>
+
+                <a href="#digital" class="hero-button">EXPLORE</a>
+            </div>
+
+            <div class="card topic-card">
+                <img
+                    src="https://images.unsplash.com/photo-1509228468518-180dd4864904?w=800"
+                    alt="Mathematics and calculations">
+
+                <h3>MATHEMATICS</h3>
+
+                <p>
+                    Build logical reasoning and quantitative
+                    problem-solving skills through mathematical
+                    concepts and applications.
+                </p>
+
+                <a href="#mathematics" class="hero-button">EXPLORE</a>
+            </div>
+
+            <div class="card topic-card">
+                <img
+                    src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800"
+                    alt="Books and general learning">
+
+                <h3>GENERAL KNOWLEDGE</h3>
+
+                <p>
+                    Expand your understanding of history,
+                    geography, society and important developments
+                    around the world.
+                </p>
+
+                <a href="#knowledge" class="hero-button">EXPLORE</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SCIENCE -->
+
+    <section class="explore" id="science">
+
+        <h2>01. <span>SCIENCE</span></h2>
+
+        <div class="card lesson-card">
+
+            <h3>UNDERSTANDING SCIENCE</h3>
+
+            <p>
+                Science is a systematic approach to understanding
+                the natural world through observation,
+                experimentation, measurement and evidence.
+            </p>
+
+            <h3>MAJOR BRANCHES</h3>
+
+            <p>
+                <strong>Physics:</strong>
+                Studies matter, energy, motion, forces and
+                the fundamental laws governing physical systems.
+            </p>
+
+            <p>
+                <strong>Chemistry:</strong>
+                Examines the composition, properties, structure
+                and transformations of matter.
+            </p>
+
+            <p>
+                <strong>Biology:</strong>
+                Investigates living organisms, their structures,
+                functions, development and interactions.
+            </p>
+
+            <h3>SCIENTIFIC APPLICATION</h3>
+
+            <p>
+                Scientific knowledge supports the development
+                of medicines, renewable energy technologies,
+                communication systems and advanced materials.
+            </p>
+
+            <h3>PRACTICAL EXAMPLE</h3>
+
+            <p>
+                Physics helps engineers understand how forces
+                affect a bridge, while chemistry helps scientists
+                investigate the properties of construction materials.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- DIGITAL SKILLS -->
+
+    <section class="explore" id="digital">
+
+        <h2>02. <span>DIGITAL SKILLS</span></h2>
+
+        <div class="card lesson-card">
+
+            <h3>WHAT ARE DIGITAL SKILLS?</h3>
+
+            <p>
+                Digital skills are the abilities required to
+                use digital devices, applications and online
+                platforms effectively, safely and responsibly.
+            </p>
+
+            <h3>ESSENTIAL COMPETENCIES</h3>
+
+            <p>
+                <strong>Computer Literacy:</strong>
+                Understanding how to operate computers,
+                manage files and use common applications.
+            </p>
+
+            <p>
+                <strong>Internet Literacy:</strong>
+                Finding, evaluating and using online information
+                while recognizing unreliable sources.
+            </p>
+
+            <p>
+                <strong>Programming:</strong>
+                Using programming languages and logical
+                instructions to develop software and automate tasks.
+            </p>
+
+            <p>
+                <strong>Digital Security:</strong>
+                Understanding passwords, privacy, secure
+                browsing and responsible online behaviour.
+            </p>
+
+            <h3>REAL-WORLD APPLICATION</h3>
+
+            <p>
+                A student can use spreadsheets to organize data,
+                presentation software to communicate research
+                and programming tools to develop simple applications.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- MATHEMATICS -->
+
+    <section class="explore" id="mathematics">
+
+        <h2>03. <span>MATHEMATICS</span></h2>
+
+        <div class="card lesson-card">
+
+            <h3>THE ROLE OF MATHEMATICS</h3>
+
+            <p>
+                Mathematics is the study of numbers, quantities,
+                structures, patterns and relationships.
+                It provides essential methods for analysing
+                problems and developing logical solutions.
+            </p>
+
+            <h3>MAJOR AREAS</h3>
+
+            <p>
+                <strong>Algebra:</strong>
+                Uses symbols and equations to represent
+                mathematical relationships and unknown quantities.
+            </p>
+
+            <p>
+                <strong>Geometry:</strong>
+                Studies shapes, dimensions, angles, areas
+                and spatial relationships.
+            </p>
+
+            <p>
+                <strong>Statistics:</strong>
+                Provides methods for collecting, analysing,
+                interpreting and presenting data.
+            </p>
+
+            <p>
+                <strong>Calculus:</strong>
+                Studies change and accumulation, with
+                applications in physics, engineering and economics.
+            </p>
+
+            <h3>ENGINEERING APPLICATION</h3>
+
+            <p>
+                Engineers use mathematical models to estimate
+                forces, calculate electrical quantities,
+                analyse structures and predict system behaviour.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- GENERAL KNOWLEDGE -->
+
+    <section class="explore" id="knowledge">
+
+        <h2>04. <span>GENERAL KNOWLEDGE</span></h2>
+
+        <div class="card lesson-card">
+
+            <h3>WHY GENERAL KNOWLEDGE MATTERS</h3>
+
+            <p>
+                General knowledge provides a broad understanding
+                of subjects beyond a person's specialist field.
+                It supports informed thinking, communication
+                and awareness of the wider world.
+            </p>
+
+            <h3>AREAS TO EXPLORE</h3>
+
+            <p>
+                <strong>History:</strong>
+                Examines past events, societies and developments
+                that have shaped the modern world.
+            </p>
+
+            <p>
+                <strong>Geography:</strong>
+                Studies Earth's physical features, environments,
+                populations and human activities.
+            </p>
+
+            <p>
+                <strong>Economics:</strong>
+                Examines how individuals and societies allocate
+                resources, produce goods and provide services.
+            </p>
+
+            <p>
+                <strong>Current Affairs:</strong>
+                Develops awareness of important events
+                and developments in society.
+            </p>
+
+            <h3>LEARNING HABIT</h3>
+
+            <p>
+                Read reliable educational materials regularly,
+                compare information from trustworthy sources
+                and remain curious about unfamiliar subjects.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- KNOWLEDGE QUIZ -->
+
+    <section class="explore">
+
+        <h2>TEST YOUR <span>KNOWLEDGE</span></h2>
+
+        <div class="card quiz-card">
+
+            <h3>QUESTION 1</h3>
+
+            <p>
+                Which branch of mathematics studies
+                shapes, angles and spatial relationships?
+            </p>
+
+            <div class="quiz-options">
+
+                <button onclick="checkAnswer(this, false)">
+                    Statistics
+                </button>
+
+                <button onclick="checkAnswer(this, true)">
+                    Geometry
+                </button>
+
+                <button onclick="checkAnswer(this, false)">
+                    Algebra
+                </button>
+
+            </div>
+
+            <p id="quiz-result"></p>
+
+            <button id="reset-button" onclick="resetQuiz()">
+                TRY AGAIN
+            </button>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+        <div class="logo">SMART <span>WRLD</span></div>
+
+        <p>LEARN • BUILD • GROW</p>
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="technology.html">Technology</a>
+            <a href="engineering.html">Engineering</a>
+            <a href="learn.html">Learn</a>
+            <a href="articles.html">Articles</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <p>SMART WRLD © 2026 | All Rights Reserved</p>
+
+    </footer>
+
+    <script>
+
+        function checkAnswer(button, correct) {
+
+            const result = document.getElementById("quiz-result");
+            const buttons = document.querySelectorAll(".quiz-options button");
+
+            buttons.forEach(function(item) {
+                item.disabled = true;
+            });
+
+            if (correct) {
+                result.textContent = "Correct! Excellent work.";
+                result.style.color = "silver";
+            } else {
+                result.textContent =
+                    "Not quite. The correct answer is Geometry.";
+                result.style.color = "orange";
+            }
+
+        }
+
+        function resetQuiz() {
+
+            const result = document.getElementById("quiz-result");
+            const buttons = document.querySelectorAll(".quiz-options button");
+
+            result.textContent = "";
+
+            buttons.forEach(function(item) {
+                item.disabled = false;
+            });
+
+        }
+
+    </script>
+
+</body>
+</html>
